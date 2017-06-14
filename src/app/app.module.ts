@@ -7,21 +7,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerComponent } from './customer/customer.component';
-import { AdminModule } from "app/admin/admin.module";
+import { AdminComponent } from './admin/admin.component';
+import { AdminModule } from './admin/admin.module';
+import { MaterialModule } from '@angular/material';
+import { AnimationBuilder } from '@angular/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    CustomerComponent
-    
+    CustomerComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    AdminModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    AdminModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
